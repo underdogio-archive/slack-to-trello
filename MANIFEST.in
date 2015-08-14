@@ -1,0 +1,2 @@
+recursive-include slack_to_trello *
+include *
