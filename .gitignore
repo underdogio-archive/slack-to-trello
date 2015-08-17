@@ -2,3 +2,4 @@
 build/
 dist/
 slack_to_trello.egg-info
+slack_to_trello/config/env

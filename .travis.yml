@@ -2,13 +2,15 @@ language: python
 python:
   - "2.7"
   - "3.3"
+  - "3.4"
 
 install:
-  # Install `slack_to_trello`
-  - python setup.py develop
-
-  # Install dev requirements
+  # Install requirements and dev requirements
+  - pip install -r requirements.txt
   - pip install -r requirements-dev.txt
+
+  # Set up `slack_to_trello` as its own dependency
+  - python setup.py develop
 
 script:
   # Run our tests
