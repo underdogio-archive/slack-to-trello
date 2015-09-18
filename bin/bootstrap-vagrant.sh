@@ -40,9 +40,9 @@ if ! sudo su --command "$echo_command" vagrant &> /dev/null; then
   sudo su --command "$create_user_command" postgres
 
   # Set up `slack-to-trello` user in PostgreSQL
-  create_user_command="psql --port=\"$psql_port\" --command \"CREATE ROLE slack-to-trello WITH SUPERUSER LOGIN;\""
+  create_user_command="psql --port=\"$psql_port\" --command \"CREATE ROLE \\\"slack-to-trello\\\" WITH SUPERUSER LOGIN;\""
   sudo su --command "$create_user_command" postgres
-  set_user_password="psql --port=\"$psql_port\" --command \"ALTER ROLE slack-to-trello WITH PASSWORD 'slack-to-trello';\""
+  set_user_password="psql --port=\"$psql_port\" --command \"ALTER ROLE \\\"slack-to-trello\\\" WITH PASSWORD 'slack-to-trello';\""
   sudo su --command "$set_user_password" postgres
 
   # Create an `slack-to-trello` database
