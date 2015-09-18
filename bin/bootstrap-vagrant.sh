@@ -51,7 +51,7 @@ if ! sudo su --command "$echo_command" vagrant &> /dev/null; then
 fi
 
 # Set up quick start scripts
-if ! test -f /home/vagrant/start-slack-to-trello.sh; then
+if ! test -L /home/vagrant/start-slack-to-trello.sh; then
   ln -s /vagrant/bin/start-slack-to-trello.sh /home/vagrant/start-slack-to-trello.sh
 fi
 
