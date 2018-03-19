@@ -57,4 +57,4 @@ if __name__ == '__main__':
     port = os.environ.get('PORT', 5000)
     env = os.environ.get('ENV', 'development')
     app.debug = env != 'production'
-    app.run(port=port)
+    app.run(host='0.0.0.0', port=port)
